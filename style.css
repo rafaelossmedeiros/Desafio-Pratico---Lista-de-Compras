@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+:root {
+
+    --ff: "Inter", serif;
+    --title: 700 24px/32px var(--ff);
+    --label: 600 16px/20px var(--ff);
+    --p: 500 16px/20px var(--ff);
+    --link: 500 14px/16px var(--ff); 
+
+    --bg-primary: #F4F5FB;
+    --bg-secondary: #FFFFFF;
+
+    --color-brand: #CA3884;
+    --color-brand-hover: #A52C6B;
+
+    --color-danger: #C93847;
+
+    --content-primary: #080B12;
+    --content-secondary: #374151;
+    --content-tertiary: #9CA3AF;
+
+    --border-primary: #D1D5DB;
+    --boder-hover: #B9C2D0;
+
+}
+
+
+
+ul {
+    
+    list-style-type: none;
+    
+    
+    margin-top: 40px;
+    
+    margin-top: 40px;
+
+    overflow-y: scroll;
+    max-height: 400px;
+
+    
+
+}
+
+li {
+    width: 98%;
+    height: 49px;
+
+    padding-left: 40px;
+
+    background-color: var(--bg-secondary);
+    background-image: url(assets/icons/checkbox.svg);
+    background-position: center left 12px;
+    background-repeat: no-repeat;
+
+    border-radius: 12px;
+    font: var(--p);
+    display: flex;
+    align-items: center;
+
+    margin-top: 12px;
+
+    &:hover {
+        background-image: url(assets/icons/checkbox-hover.svg);
+    }
+
+    cursor: pointer;
+
+    .editimage {
+        margin-left: auto;
+        margin-right: 17px;
+        
+
+    }
+
+    .editimage:hover {
+        content: url(assets/icons/delete-hover.svg);
+    }
+
+
+
+    
+}
+
+body {
+    border: solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100vh;
+
+    background: var(--bg-primary);
+
+}
+
+.logo {
+    width: 155px;
+    height: 40;
+
+    margin-top: 25px;
+}
+
+header {
+    width: min(627px, 100% - 20px);
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 62px;
+    gap: 16px;
+
+    
+    & h1 {
+        font: var(--title);
+    }
+
+    & a {
+        font: var(--link);
+        color: var(--color-brand)
+    }
+}
+
+main {
+
+    width: min(627px, 100% - 20px);
+    margin-top: 45px;
+}
+
+form {
+
+    .formresponsive {
+
+        width: 100%;
+        gap: 16px;
+        display: flex;
+        
+
+        & input {
+            width: 100%;
+            padding: 18px;
+            height: 44px;
+
+            border-radius: 12px;
+            border: solid var(--border-primary);
+            outline: none;
+
+            transition: border 0.7s;
+
+            &:hover {
+                border: solid var(--boder-hover);
+            }
+
+            &:focus {
+                border: solid var(--color-brand);
+            }
+
+            
+ 
+            &::placeholder {
+                color: var(--content-tertiary);
+            }
+
+            font: 400 16px/20px var(--ff); 
+            
+        }
+
+        & button:focus-within {
+            outline: none;
+            border: none;
+        }
+
+        & button {
+            
+            
+            font: var(--label);
+            width: 250px;
+            height: 44px;
+            background-color: var(--color-brand);
+            border-radius: 12px;
+            color: #FFFFFF;
+
+            border: none;
+
+            transition: background 0.7s ease-out;
+            
+
+    
+            
+        }
+    }
+
+    @media (width <= 80rem) {
+
+        .formresponsive {
+            flex-wrap: wrap;
+        }
+    
+        #buttonresponsive {
+            width: 100%;
+            
+            
+        }
+    }
+
+
+}
+
+
+
+#buttonresponsive:hover, #buttonresponsive:focus-within {
+    background: var(--color-brand-hover)
+    
+}
+
+.alertmessage {
+    width: 100%;
+    height: 44px;
+
+    padding: 12px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 12px;
+
+    margin-top: 36px;
+
+    
+    background-color: var(--color-danger);
+    background-image: url(assets/icons/alert.svg);
+    background-position: center left 12px;
+    background-repeat: no-repeat;
+
+    img {
+        
+        margin-left: auto;
+        margin-right: 12px;
+
+        width: 12px;
+        height: 12px;
+
+        cursor: pointer;
+    }
+
+    p {
+        font: var(--p);
+        color: white;
+        width: auto;
+        
+
+        margin-left: 40px;
+        margin-right: 10px;
+    }
+}
+
+.show-alert {
+    display: none;
+}
+
+
+.newbg, .newbg:hover {
+    
+    background-image: url(assets/icons/checkbox-checked.svg);
+    
+}
+
+
+::-webkit-scrollbar {
+    width: 4px;
+    
+}
+  
+
+  
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-brand);    
+}
+

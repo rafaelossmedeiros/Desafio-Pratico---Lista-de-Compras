@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <img class="logo" src="assets/logo.svg" alt="logo quicklist">
+
+    <header>
+        <a href="#"> 
+            &#8592
+            Voltar</a>
+        <h1>Compras da semana</h1>
+        
+    </header>
+
+    <main>
+
+        <form>
+            <div class="formresponsive">
+                <input type="text" placeholder="Adicione um novo item">
+                <button id="buttonresponsive" type="submit">Adicionar item</button>
+            </div>
+        </form>
+    
+        <ul id="listadecompras">
+            <li>Pão de forma
+                
+            </li>
+            <li>Café preto
+                
+            </li>
+            <li>Suco de laranja
+                
+            </li>
+            <li>Bolacha
+                
+            </li>
+        </ul>
+    
+        <div class="alertmessage show-alert">
+            <p>O item foi removido da lista</p>
+            <img src="assets/icons/close.svg" alt="">
+        </div>
+
+        
+
+
+    </main>
+
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
